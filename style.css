@@ -1,0 +1,145 @@
+
+body {
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    background: #fff;
+    color: #5e2a84;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #fbe8e1;
+    text-align: center;
+    padding: 1rem;
+}
+
+.logo {
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #b84a00;
+    margin-top: 20px;
+}
+
+.cardapio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+
+
+.item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.item input {
+    width: 60px;
+    padding: 5px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: #fbe8e1;
+    color: #da7c3c;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+
+.item h2 {
+    color: #da7c3c;
+    font-size: 1.3rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.item p {
+    font-size: 0.95rem;
+    color: #5e2a84;
+    margin-bottom: 0.8rem;
+}
+
+.item input {
+    width: 60px;
+    padding: 6px;
+    font-size: 1rem;
+    border: 1px solid #da7c3c;
+    border-radius: 8px;
+}
+
+.item .total {
+    font-weight: bold;
+    color: #b84a00;
+}
+
+
+.item {
+    display: flex;
+    background: #fef6f2;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(218, 124, 60, 0.2);
+    width: 100%;
+    max-width: 650px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border: 2px solid #fcd9ca;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(218, 124, 60, 0.3);
+}
+
+.item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+}
+
+.item-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.item-content h2 {
+    color: #da7c3c;
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem;
+}
+
+.item-content p {
+    font-size: 0.95rem;
+    color: #5e2a84;
+    margin: 0.3rem 0;
+}
+
+.item-content input {
+    width: 60px;
+    padding: 6px;
+    font-size: 1rem;
+    border: 1px solid #da7c3c;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.item-content .total {
+    font-weight: bold;
+    color: #b84a00;
+}
