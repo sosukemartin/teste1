@@ -148,25 +148,29 @@ button {
         flex-direction: column;
         align-items: center;
         padding: 1rem;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     .item {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
         max-width: 95%;
         width: 95%;
     }
 
     .item img {
-        width: 100%;
-        height: auto;
-        border-radius: 20px 20px 0 0;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 12px;
     }
 
     .item-content {
-        width: 100%;
         padding: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
     }
 
     .logo {
@@ -174,29 +178,29 @@ button {
     }
 
     h1 {
-        font-size: 1.5rem;
-        padding: 0 1rem;
+        font-size: 1.8rem;
     }
 
     .item-content h2 {
-        font-size: 1.2rem;
-        text-align: center;
+        font-size: 1.1rem;
+        margin: 0 0 0.4rem;
     }
 
     .item-content p {
         font-size: 0.9rem;
-        text-align: center;
+        margin: 0.2rem 0;
     }
 
     .item-content input {
         width: 50px;
-        padding: 5px;
         font-size: 0.9rem;
+        padding: 4px;
     }
 
     button {
         width: 90%;
         font-size: 1rem;
         padding: 0.8rem;
+        margin-bottom: 2rem;
     }
 }
