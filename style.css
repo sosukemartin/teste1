@@ -148,12 +148,14 @@ button {
         flex-direction: column;
         align-items: center;
         padding: 1rem;
+        gap: 1rem;
     }
 
     .item {
         flex-direction: column;
         align-items: center;
         max-width: 95%;
+        width: 95%;
     }
 
     .item img {
@@ -163,16 +165,33 @@ button {
     }
 
     .item-content {
-        padding: 1rem;
         width: 100%;
+        padding: 0.8rem;
     }
 
     .logo {
-        width: 80%;
+        width: 250px;
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .item-content h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .item-content p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .item-content input {
+        width: 50px;
+        padding: 5px;
+        font-size: 0.9rem;
     }
 
     button {
