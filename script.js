@@ -27,7 +27,24 @@ function enviarWhatsApp() {
 
     mensagem += `%0ATotal: *R$${totalGeral.toFixed(2)}*`;
 
-    const fone = '5511999999999'; // Substitua com o número do WhatsApp da loja
+    const fone = '5521965781487'; // Substitua com o número do WhatsApp da loja
     const url = `https://wa.me/${fone}?text=${mensagem}`;
-    window.open(url, '_blank');
+    window.location.href = url;
 }
+
+
+document.querySelectorAll('.btn-menor').forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        const input = btn.nextElementSibling;
+        input.value = Math.max(0, parseInt(input.value) - 1);
+        input.dispatchEvent(new Event('input'));
+    });
+});
+
+document.querySelectorAll('.btn-maior').forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+        const input = btn.previousElementSibling;
+        input.value = parseInt(input.value) + 1;
+        input.dispatchEvent(new Event('input'));
+    });
+});
