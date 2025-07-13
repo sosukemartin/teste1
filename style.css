@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Arial Rounded MT Bold', sans-serif;
     background: #fff;
@@ -30,8 +31,6 @@ h1 {
     padding: 2rem;
 }
 
-
-
 .item img {
     width: 100%;
     border-radius: 10px;
@@ -55,9 +54,6 @@ button {
     border-radius: 10px;
     cursor: pointer;
 }
-
-
-
 
 .item h2 {
     color: #da7c3c;
@@ -84,9 +80,9 @@ button {
     color: #b84a00;
 }
 
-
 .item {
     display: flex;
+    flex-direction: row;
     background: #fef6f2;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(218, 124, 60, 0.2);
@@ -144,116 +140,121 @@ button {
 }
 
 @media (max-width: 768px) {
-  .cardapio {
-    flex-direction: column;
+    .cardapio {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .item {
+        flex-direction: row !important;
+        align-items: flex-start;
+        max-width: 95%;
+        width: 95%;
+    }
+
+    .item img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 12px 0 0 12px;
+    }
+
+    .item-content {
+        padding: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    .logo {
+        width: 250px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .item-content h2 {
+        font-size: 1.1rem;
+        margin: 0 0 0.4rem;
+    }
+
+    .item-content p {
+        font-size: 0.9rem;
+        margin: 0.2rem 0;
+    }
+
+    .item-content input {
+        width: 50px;
+        font-size: 0.9rem;
+        padding: 4px;
+    }
+
+    button {
+        width: 90%;
+        font-size: 1rem;
+        padding: 0.8rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.quantidade-wrapper {
+    display: flex;
     align-items: center;
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  .item {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    background: #fef6f2;
-    border-radius: 16px;
-    box-shadow: 0 2px 6px rgba(218, 124, 60, 0.15);
-    border: 1.5px solid #fcd9ca;
-    max-width: 95%;
-    width: 95%;
-    overflow: hidden;
-    padding: 0.6rem;
-  }
-
-  .item img {
-    width: 90px;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 12px;
-    flex-shrink: 0;
-    margin-right: 0.6rem;
-  }
-
-  .item-content {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
-  }
-
-  .item-content h2 {
-    font-size: 0.95rem;
-    color: #da7c3c;
-    margin: 0 0 0.3rem;
-  }
-
-  .item-content p {
-    font-size: 0.8rem;
-    margin: 0.2rem 0;
-    color: #5e2a84;
-    line-height: 1.2rem;
-  }
-
-  .quantidade-wrapper {
-    display: flex;
-    align-items: center;
-    margin-top: 6px;
+    margin-top: 10px;
     border: 1px solid #da7c3c;
     border-radius: 8px;
     overflow: hidden;
-    height: 32px;
+    height: 40px;
     width: fit-content;
-  }
+}
 
-  .quantidade-wrapper button {
-    width: 32px !important;
-    height: 32px;
-    font-size: 1rem;
-    padding: 0 !important;
+.quantidade-wrapper button {
     background-color: #fbe8e1;
     color: #da7c3c;
     border: none;
+    width: 40px !important;
+    height: 100%;
+    font-size: 1.2rem;
     font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+    padding: 0 !important;
+    box-sizing: border-box;
+}
 
-  .quantidade-wrapper input {
-    width: 32px !important;
-    height: 32px;
-    font-size: 1rem;
+.quantidade-wrapper button:hover {
+    background-color: #fcd9ca;
+}
+
+.quantidade-wrapper input {
+    width: 40px !important;
+    height: 40px;
+    font-size: 1.2rem;
     text-align: center;
     border: none;
     outline: none;
-    background-color: white;
-    pointer-events: none;
     padding: 0;
     margin: 0;
-    line-height: 32px;
+    line-height: 40px;
+    vertical-align: middle;
     box-sizing: border-box;
-  }
+    background-color: white;
+}
 
-  button {
-    width: 90%;
-    font-size: 1rem;
-    padding: 0.8rem;
-    margin: 2rem auto 0;
-    display: block;
-    background-color: #fbe8e1;
-    color: #da7c3c;
-    border: none;
-    border-radius: 10px;
-  }
+/* Remove as setinhas do input number */
+.quantidade-wrapper input::-webkit-outer-spin-button,
+.quantidade-wrapper input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
-  .logo {
-    width: 220px;
-  }
-
-  p {
-    font-size: 1rem !important;
-    text-align: center;
-    padding: 0 1rem;
-  }
+.quantidade-wrapper input[type=number] {
+    -moz-appearance: textfield;
 }
