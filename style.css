@@ -332,7 +332,7 @@ button {
         flex-direction: column;
         align-items: center;
         padding: 1rem;
-        gap: 1.2rem;
+        gap: 1.5rem;
     }
 
     .item {
@@ -345,7 +345,6 @@ button {
     .item img {
         width: 100%;
         height: auto;
-        object-fit: cover;
         border-radius: 12px;
     }
 
@@ -356,20 +355,23 @@ button {
         justify-content: flex-start;
         align-items: center;
         text-align: center;
-        flex: 1;
+        width: 100%;
     }
 
     .item-content h2 {
-        font-size: 1.2rem;
-        margin: 0.8rem 0 0.5rem;
+        font-size: 1.3rem;
+        margin: 0.7rem 0 0.5rem;
     }
 
     .item-content p {
         font-size: 1rem;
-        margin: 0.4rem 0;
+        margin: 0.3rem 0;
     }
 
     .quantidade-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin-top: 0.8rem;
         height: 42px;
         border: 1px solid #da7c3c;
@@ -379,32 +381,48 @@ button {
     }
 
     .quantidade-wrapper button {
-        width: 42px !important;
+        width: 44px;
         height: 100%;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        font-weight: bold;
         padding: 0;
-        box-sizing: border-box;
+        border: none;
+        background: #fbe8e1;
+        color: #da7c3c;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .quantidade-wrapper button:hover {
+        background: #fcd9ca;
     }
 
     .quantidade-wrapper input {
-        width: 42px !important;
+        width: 44px;
         height: 100%;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         text-align: center;
         border: none;
         outline: none;
         padding: 0;
         margin: 0;
         line-height: 42px;
-        vertical-align: middle;
-        background-color: white;
-        box-sizing: border-box;
+        background: white;
     }
 
     button {
         width: 95%;
-        font-size: 1.1rem;
-        padding: 0.9rem;
+        font-size: 1.2rem;
+        padding: 1rem;
         margin: 1.5rem 0 2rem;
+        border-radius: 10px;
+        background-color: #fbe8e1;
+        color: #da7c3c;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #fcd9ca;
     }
 }
