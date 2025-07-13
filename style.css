@@ -336,40 +336,42 @@ button {
     }
 
     .item {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         width: 95%;
         max-width: 95%;
     }
 
     .item img {
-        width: 110px;
-        height: 110px;
+        width: 100%;
+        height: auto;
         object-fit: cover;
         border-radius: 12px;
     }
 
     .item-content {
-        padding: 0.7rem;
+        padding: 1rem;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
         flex: 1;
     }
 
     .item-content h2 {
-        font-size: 1rem;
-        margin: 0 0 0.3rem;
+        font-size: 1.2rem;
+        margin: 0.8rem 0 0.5rem;
     }
 
     .item-content p {
-        font-size: 0.9rem;
-        margin: 0.2rem 0;
+        font-size: 1rem;
+        margin: 0.4rem 0;
     }
 
     .quantidade-wrapper {
-        margin-top: 0.5rem;
-        height: 38px;
+        margin-top: 0.8rem;
+        height: 42px;
         border: 1px solid #da7c3c;
         border-radius: 8px;
         overflow: hidden;
@@ -377,23 +379,23 @@ button {
     }
 
     .quantidade-wrapper button {
-        width: 38px !important;
+        width: 42px !important;
         height: 100%;
-        font-size: 1rem;
+        font-size: 1.2rem;
         padding: 0;
         box-sizing: border-box;
     }
 
     .quantidade-wrapper input {
-        width: 38px !important;
+        width: 42px !important;
         height: 100%;
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-align: center;
         border: none;
         outline: none;
         padding: 0;
         margin: 0;
-        line-height: 38px;
+        line-height: 42px;
         vertical-align: middle;
         background-color: white;
         box-sizing: border-box;
@@ -401,8 +403,8 @@ button {
 
     button {
         width: 95%;
-        font-size: 1rem;
-        padding: 0.8rem;
-        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        padding: 0.9rem;
+        margin: 1.5rem 0 2rem;
     }
 }
