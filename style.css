@@ -111,7 +111,7 @@ button {
   cursor: pointer;
 }
 
-/* Mobile: layout corrigido */
+/* MOBILE DEFINITIVO — layout travado */
 @media (max-width: 768px) {
   .cardapio {
     flex-direction: column;
@@ -121,47 +121,55 @@ button {
   }
 
   .item {
+    display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     max-width: 95vw;
     width: 95vw;
+    height: 130px;
     border-radius: 12px;
-    padding: 0;
     overflow: hidden;
     box-sizing: border-box;
   }
 
   .item img {
     width: 100px;
-    height: 100px;
+    height: 100%;
     object-fit: cover;
     flex-shrink: 0;
     border-radius: 12px 0 0 12px;
-    margin: 0;
   }
 
   .item-content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 0.8rem;
+    justify-content: space-between;
+    padding: 0.6rem;
     flex: 1;
     overflow: hidden;
   }
 
   .item-content h2, .item-content h3 {
-    font-size: 1.05rem;
-    margin: 0 0 0.3rem;
+    font-size: 1rem;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .item-content p {
-    font-size: 0.8rem;
-    margin: 0.2rem 0;
-    line-height: 1.2;
+    font-size: 0.75rem;
+    margin: 0;
+    line-height: 1.1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 
   .quantidade-wrapper {
-    margin: 0.4rem 0;
+    margin: 0.3rem 0;
     height: 35px;
   }
 
@@ -178,7 +186,7 @@ button {
   }
 
   .item-content .total {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   button {
