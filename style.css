@@ -315,324 +315,77 @@ button {
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
+  .cardapio {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
 
-    .logo {
-        width: 220px;
-    }
+  .item {
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 95%;
+    width: 95%;
+  }
 
-    p {
-        font-size: 1rem;
-        text-align: center;
-    }
+  .item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
 
-    .cardapio {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        gap: 1.5rem;
-    }
+  .item-content {
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+  }
 
-    .item {
-        flex-direction: column;
-        align-items: center;
-        width: 95%;
-        max-width: 95%;
-    }
+  .logo {
+    width: 250px;
+  }
 
-    .item img {
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-    }
+  .item-content h2 {
+    font-size: 1rem;
+    margin: 0.2rem 0;
+  }
 
-    .item-content {
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-    }
+  .item-content p {
+    font-size: 0.85rem;
+    margin: 0.2rem 0;
+  }
 
-    .item-content h2 {
-        font-size: 1.3rem;
-        margin: 0.7rem 0 0.5rem;
-    }
+  .quantidade-wrapper {
+    margin-top: 8px;
+    height: 36px;
+    border-radius: 8px;
+  }
 
-    .item-content p {
-        font-size: 1rem;
-        margin: 0.3rem 0;
-    }
+  .quantidade-wrapper button {
+    width: 36px !important;
+    height: 100%;
+    font-size: 1.2rem;
+    padding: 0 !important;
+  }
 
-    .quantidade-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 0.8rem;
-        height: 42px;
-        border: 1px solid #da7c3c;
-        border-radius: 8px;
-        overflow: hidden;
-        width: fit-content;
-    }
+  .quantidade-wrapper input {
+    width: 36px !important;
+    height: 100%;
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    border: none;
+    background-color: white;
+  }
 
-    .quantidade-wrapper button {
-        width: 44px;
-        height: 100%;
-        font-size: 1.3rem;
-        font-weight: bold;
-        padding: 0;
-        border: none;
-        background: #fbe8e1;
-        color: #da7c3c;
-        cursor: pointer;
-        transition: background 0.3s;
-    }
-
-    .quantidade-wrapper button:hover {
-        background: #fcd9ca;
-    }
-
-    .quantidade-wrapper input {
-        width: 44px;
-        height: 100%;
-        font-size: 1.3rem;
-        text-align: center;
-        border: none;
-        outline: none;
-        padding: 0;
-        margin: 0;
-        line-height: 42px;
-        background: white;
-    }
-
-    button {
-        width: 95%;
-        font-size: 1.2rem;
-        padding: 1rem;
-        margin: 1.5rem 0 2rem;
-        border-radius: 10px;
-        background-color: #fbe8e1;
-        color: #da7c3c;
-        border: none;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background: #fcd9ca;
-    }
-}
-
-
-@media (max-width: 480px) {
-    body {
-        padding: 0 10px;
-    }
-
-    .item {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .item img {
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-    }
-
-    .item-content {
-        padding: 1rem 0.5rem;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-    }
-
-    .item-content h2 {
-        font-size: 1.1rem;
-    }
-
-    .item-content p {
-        font-size: 0.95rem;
-    }
-
-    .quantidade-wrapper {
-        margin: 0.6rem auto;
-    }
-
-    .quantidade-wrapper button,
-    .quantidade-wrapper input {
-        width: 36px !important;
-        font-size: 1rem;
-    }
-
-    button {
-        width: 100%;
-        margin: 1.2rem auto 2rem;
-        font-size: 1.1rem;
-    }
-
-    .logo {
-        width: 180px;
-    }
-}
-
-
-@media (max-width: 480px), (max-width: 375px), (max-width: 320px) {
-    body {
-        padding: 0 8px;
-        font-size: 15px;
-    }
-
-    header {
-        padding: 0.5rem;
-    }
-
-    .logo {
-        width: 160px;
-    }
-
-    .cardapio {
-        gap: 1.2rem;
-        padding: 0.5rem 0;
-    }
-
-    .item {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        max-width: 100%;
-        padding: 0.6rem;
-    }
-
-    .item img {
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-    }
-
-    .item-content {
-        padding: 0.8rem 0.4rem;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-    }
-
-    .item-content h2 {
-        font-size: 1rem;
-        margin: 0.6rem 0 0.4rem;
-    }
-
-    .item-content p {
-        font-size: 0.9rem;
-        margin: 0.2rem 0;
-    }
-
-    .quantidade-wrapper {
-        margin: 0.5rem auto;
-        height: 40px;
-        justify-content: center;
-    }
-
-    .quantidade-wrapper button,
-    .quantidade-wrapper input {
-        width: 34px !important;
-        height: 100%;
-        font-size: 1rem;
-    }
-
-    button {
-        width: 100%;
-        margin: 1rem auto 2rem;
-        font-size: 1.05rem;
-        padding: 0.9rem;
-    }
-}
-
-
-@media (max-width: 480px) {
-    body {
-        padding: 0 12px;
-    }
-
-    .cardapio {
-        flex-direction: column;
-        align-items: center;
-        padding: 0.8rem 0;
-        gap: 1.2rem;
-    }
-
-    .item {
-        flex-direction: row;
-        align-items: flex-start;
-        width: 100%;
-        max-width: 100%;
-        padding: 0.6rem;
-    }
-
-    .item img {
-        width: 110px;
-        height: 110px;
-        object-fit: cover;
-        border-radius: 12px;
-    }
-
-    .item-content {
-        padding: 0 0.8rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        text-align: left;
-        width: 100%;
-    }
-
-    .item-content h2 {
-        font-size: 1.1rem;
-        margin: 0.3rem 0;
-    }
-
-    .item-content p {
-        font-size: 0.95rem;
-        margin: 0.2rem 0;
-    }
-
-    .quantidade-wrapper {
-        margin: 0.6rem 0;
-        height: 40px;
-        justify-content: flex-start;
-    }
-
-    .quantidade-wrapper button,
-    .quantidade-wrapper input {
-        width: 36px !important;
-        height: 100%;
-        font-size: 1rem;
-    }
-
-    button {
-        width: 100%;
-        font-size: 1.05rem;
-        padding: 0.9rem;
-        margin: 1rem 0 2rem;
-    }
-
-    .logo {
-        width: 200px;
-        margin-bottom: 0.5rem;
-    }
-
-    header {
-        padding: 1rem 0;
-    }
-
-    p {
-        font-size: 1rem;
-        text-align: center;
-        margin: 0.5rem 0 1rem;
-        padding: 0 1rem;
-    }
+  button {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+  }
 }
