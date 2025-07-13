@@ -15,7 +15,7 @@ function enviarWhatsApp() {
     let totalGeral = 0;
 
     inputs.forEach((input, index) => {
-        const nome = input.parentElement.querySelector('h2').textContent;
+        const nome = input.closest('.item').querySelector('h2').textContent;
         const qtd = parseInt(input.value) || 0;
         const preco = parseFloat(input.dataset.preco);
         if (qtd > 0) {
@@ -27,13 +27,12 @@ function enviarWhatsApp() {
 
     mensagem += `%0ATotal: *R$${totalGeral.toFixed(2)}*`;
 
-    const fone = '5521965781487'; // Substitua com o número do WhatsApp da loja
+    const fone = '5521965781487';
     const url = `https://wa.me/${fone}?text=${mensagem}`;
     window.location.href = url;
 }
 
-
-document.querySelectorAll('.btn-menor').forEach((btn, index) => {
+document.querySelectorAll('.btn-menor').forEach((btn) => {
     btn.addEventListener('click', () => {
         const input = btn.nextElementSibling;
         input.value = Math.max(0, parseInt(input.value) - 1);
@@ -41,7 +40,7 @@ document.querySelectorAll('.btn-menor').forEach((btn, index) => {
     });
 });
 
-document.querySelectorAll('.btn-maior').forEach((btn, index) => {
+document.querySelectorAll('.btn-maior').forEach((btn) => {
     btn.addEventListener('click', () => {
         const input = btn.previousElementSibling;
         input.value = parseInt(input.value) + 1;
