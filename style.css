@@ -1,286 +1,194 @@
 body {
-    font-family: 'Arial Rounded MT Bold', sans-serif;
-    background: #fff;
-    color: #5e2a84;
-    margin: 0;
-    padding: 0;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  background: #fff;
+  color: #5e2a84;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-    background: #fbe8e1;
-    text-align: center;
-    padding: 1rem;
+  background: #fbe8e1;
+  text-align: center;
+  padding: 1rem;
 }
 
 .logo {
-    width: 400px;
-}
-
-h3 {;
-    color: #b84a00;
-    margin-top: 10px;
-}
-
-h1 {
-    text-align: center;
-    color: #b84a00;
-    margin-top: 20px;
+  width: 400px;
 }
 
 .cardapio {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .item {
-    display: flex;
-    flex-direction: row;
-    background: #fef6f2;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(218, 124, 60, 0.2);
-    width: 100%;
-    max-width: 650px;
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-    border: 2px solid #fcd9ca;
-}
-
-.item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(218, 124, 60, 0.3);
+  display: flex;
+  flex-direction: row;
+  background: #fef6f2;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(218, 124, 60, 0.2);
+  width: 100%;
+  max-width: 650px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border: 2px solid #fcd9ca;
 }
 
 .item img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 20px 0 0 20px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px 0 0 20px;
 }
 
 .item-content {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
 }
 
-.item-content h2 {
-    color: #da7c3c;
-    font-size: 1.3rem;
-    margin: 0 0 0.5rem;
+.item-content h2, .item-content h3 {
+  color: #da7c3c;
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem;
 }
 
 .item-content p {
-    font-size: 0.95rem;
-    color: #5e2a84;
-    margin: 0.3rem 0;
-}
-
-.item-content input {
-    width: 60px;
-    padding: 6px;
-    font-size: 1rem;
-    border: 1px solid #da7c3c;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.item-content .total {
-    font-weight: bold;
-    color: #b84a00;
-}
-
-button {
-    display: block;
-    margin: 2rem auto;
-    padding: 1rem 2rem;
-    background-color: #fbe8e1;
-    color: #da7c3c;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
+  font-size: 0.95rem;
+  color: #5e2a84;
+  margin: 0.3rem 0;
 }
 
 .quantidade-wrapper {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    border: 1px solid #da7c3c;
-    border-radius: 8px;
-    overflow: hidden;
-    height: 40px;
-    width: fit-content;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  border: 1px solid #da7c3c;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 40px;
+  width: fit-content;
 }
 
 .quantidade-wrapper button {
-    background-color: #fbe8e1;
-    color: #da7c3c;
-    border: none;
-    width: 40px !important;
-    height: 100%;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 !important;
-    box-sizing: border-box;
-}
-
-.quantidade-wrapper button:hover {
-    background-color: #fcd9ca;
+  background-color: #fbe8e1;
+  color: #da7c3c;
+  border: none;
+  width: 40px;
+  height: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .quantidade-wrapper input {
-    width: 40px !important;
-    height: 40px;
-    font-size: 1.2rem;
-    text-align: center;
-    border: none;
-    outline: none;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+
+button {
+  display: block;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #fbe8e1;
+  color: #da7c3c;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Mobile: layout corrigido */
+@media (max-width: 768px) {
+  .cardapio {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .item {
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 95vw;
+    width: 95vw;
+    border-radius: 12px;
     padding: 0;
-    margin: 0;
-    line-height: 40px;
-    vertical-align: middle;
+    overflow: hidden;
     box-sizing: border-box;
-    background-color: white;
-}
+  }
 
-/* Remove setinhas do input number */
-.quantidade-wrapper input::-webkit-outer-spin-button,
-.quantidade-wrapper input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  .item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 12px 0 0 12px;
     margin: 0;
-}
+  }
 
-.quantidade-wrapper input[type=number] {
-    -moz-appearance: textfield;
-}
+  .item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0.8rem;
+    flex: 1;
+    overflow: hidden;
+  }
 
-/* CORREÇÃO MOBILE: manter layout horizontal */
-@media (max-width: 768px) {
-    .cardapio {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        gap: 1.5rem;
-    }
+  .item-content h2, .item-content h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.3rem;
+  }
 
-    .item {
-        display: flex !important;
-        flex-direction: row !important;
-        align-items: stretch;
-        max-width: 95vw;
-        width: 95vw;
-        height: auto;
-        box-sizing: border-box;
-    }
+  .item-content p {
+    font-size: 0.8rem;
+    margin: 0.2rem 0;
+    line-height: 1.2;
+  }
 
-    .item img {
-        width: 110px;
-        height: 110px;
-        object-fit: cover;
-        flex-shrink: 0;
-        border-radius: 12px 0 0 12px;
-        margin: 0;
-    }
+  .quantidade-wrapper {
+    margin: 0.4rem 0;
+    height: 35px;
+  }
 
-    .item-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 0.8rem;
-        flex-grow: 1;
-        flex-basis: 0;
-        overflow: hidden;
-        min-width: 0;
-    }
+  .quantidade-wrapper button {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
 
-    .item-content h2 {
-        font-size: 1.05rem;
-        margin: 0 0 0.3rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+  .quantidade-wrapper input {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
 
-    .item-content p {
-        font-size: 0.85rem;
-        margin: 0.2rem 0;
-        line-height: 1.2;
-    }
+  .item-content .total {
+    font-size: 0.85rem;
+  }
 
-    .item-content .quantidade-wrapper {
-        margin-top: 0.4rem;
-        margin-bottom: 0.4rem;
-    }
+  button {
+    width: 90%;
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin: 2rem 0;
+  }
 
-    .item-content input {
-        width: 45px;
-        font-size: 0.9rem;
-    }
-
-    .logo {
-        width: 240px;
-    }
-
-    h1 {
-        font-size: 1.6rem;
-    }
-
-    button {
-        width: 90%;
-        font-size: 1rem;
-        padding: 0.8rem;
-        margin-bottom: 2rem;
-    }
-}
-@media (max-width: 768px) {
-    .item {
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 0;
-    }
-
-    .item-content {
-        padding: 0.7rem 0.8rem;
-        justify-content: flex-start;
-        gap: 0.4rem;
-    }
-
-    .item-content p,
-    .item-content .total {
-        word-break: break-word;
-    }
-
-    .quantidade-wrapper {
-        margin-top: 0.5rem;
-        margin-bottom: 0.2rem;
-    }
-
-    .quantidade-wrapper input {
-        font-size: 1rem;
-        width: 35px;
-    }
-
-    .quantidade-wrapper button {
-        width: 35px;
-        font-size: 1rem;
-    }
-
-    .item-content .total {
-        font-size: 0.9rem;
-    }
-
-    .item img {
-        border-radius: 20px 0 0 20px;
-        object-fit: cover;
-    }
+  .logo {
+    width: 220px;
+  }
 }
