@@ -16,6 +16,11 @@ header {
     width: 400px;
 }
 
+h3 {;
+    color: #b84a00;
+    margin-top: 10px;
+}
+
 h1 {
     text-align: center;
     color: #b84a00;
