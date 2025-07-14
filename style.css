@@ -13,75 +13,71 @@ header {
 }
 
 .logo {
-  width: 400px;
+  width: 320px;
 }
 
 .cardapio {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 2rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  max-width: 480px;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .item {
   display: flex;
   flex-direction: row;
-  background: #fef6f2;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(218, 124, 60, 0.2);
+  align-items: center;
   width: 100%;
-  max-width: 650px;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  background: #fef6f2;
+  border-radius: 15px;
+  padding: 0.6rem;
+  gap: 0.8rem;
   border: 2px solid #fcd9ca;
 }
 
 .item img {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
-  border-radius: 20px 0 0 20px;
+  border-radius: 12px;
 }
 
 .item-content {
-  padding: 1rem;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1;
 }
 
 .item-content h2, .item-content h3 {
   color: #da7c3c;
-  font-size: 1.3rem;
-  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .item-content p {
-  font-size: 0.95rem;
-  color: #5e2a84;
-  margin: 0.3rem 0;
+  font-size: 0.75rem;
+  margin: 0.2rem 0;
 }
 
 .quantidade-wrapper {
   display: flex;
   align-items: center;
-  margin-top: 10px;
-  border: 1px solid #da7c3c;
-  border-radius: 8px;
-  overflow: hidden;
-  height: 40px;
-  width: fit-content;
+  margin: 0.3rem 0;
+  height: 35px;
 }
 
 .quantidade-wrapper button {
   background-color: #fbe8e1;
   color: #da7c3c;
   border: none;
-  width: 40px;
-  height: 100%;
-  font-size: 1.2rem;
+  width: 35px;
+  height: 35px;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   display: flex;
@@ -90,12 +86,11 @@ header {
 }
 
 .quantidade-wrapper input {
-  width: 40px;
-  height: 40px;
-  font-size: 1.2rem;
+  width: 35px;
+  height: 35px;
+  font-size: 1rem;
   text-align: center;
-  border: none;
-  outline: none;
+  border: 1px solid #da7c3c;
   background-color: white;
 }
 
@@ -109,94 +104,4 @@ button {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-}
-
-/* MOBILE DEFINITIVO — layout travado */
-@media (max-width: 768px) {
-  .cardapio {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  .item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    max-width: 95vw;
-    width: 95vw;
-    height: 130px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-
-  .item img {
-    width: 100px;
-    height: 100%;
-    object-fit: cover;
-    flex-shrink: 0;
-    border-radius: 12px 0 0 12px;
-  }
-
-  .item-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0.6rem;
-    flex: 1;
-    overflow: hidden;
-  }
-
-  .item-content h2, .item-content h3 {
-    font-size: 1rem;
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .item-content p {
-    font-size: 0.75rem;
-    margin: 0;
-    line-height: 1.1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-  }
-
-  .quantidade-wrapper {
-    margin: 0.3rem 0;
-    height: 35px;
-  }
-
-  .quantidade-wrapper button {
-    width: 35px;
-    height: 35px;
-    font-size: 1rem;
-  }
-
-  .quantidade-wrapper input {
-    width: 35px;
-    height: 35px;
-    font-size: 1rem;
-  }
-
-  .item-content .total {
-    font-size: 0.8rem;
-  }
-
-  button {
-    width: 90%;
-    font-size: 1rem;
-    padding: 0.8rem;
-    margin: 2rem 0;
-  }
-
-  .logo {
-    width: 220px;
-  }
 }
