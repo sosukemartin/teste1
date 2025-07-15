@@ -1,107 +1,88 @@
 body {
-  font-family: 'Arial Rounded MT Bold', sans-serif;
-  background: #fff;
-  color: #5e2a84;
   margin: 0;
-  padding: 0;
+  font-family: sans-serif;
+  background: #ffe8e8;
+  color: #5f0f40;
 }
 
-header {
-  background: #fbe8e1;
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
   text-align: center;
-  padding: 1rem;
 }
 
 .logo {
-  width: 320px;
+  width: 220px;
+  margin-bottom: 20px;
 }
 
-.cardapio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
-  padding: 1.5rem;
-  max-width: 480px;
-  margin: 0 auto;
-  overflow-x: hidden;
+h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  background: #fef6f2;
-  border-radius: 15px;
-  padding: 0.6rem;
-  gap: 0.8rem;
-  border: 2px solid #fcd9ca;
-}
-
-.item img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.item-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.item-content h2, .item-content h3 {
-  color: #da7c3c;
-  font-size: 1rem;
-  margin: 0;
-}
-
-.item-content p {
-  font-size: 0.75rem;
-  margin: 0.2rem 0;
-}
-
-.quantidade-wrapper {
-  display: flex;
-  align-items: center;
-  margin: 0.3rem 0;
-  height: 35px;
-}
-
-.quantidade-wrapper button {
-  background-color: #fbe8e1;
-  color: #da7c3c;
-  border: none;
-  width: 35px;
-  height: 35px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.quantidade-wrapper input {
-  width: 35px;
-  height: 35px;
-  font-size: 1rem;
-  text-align: center;
-  border: 1px solid #da7c3c;
-  background-color: white;
-}
-
-button {
-  display: block;
-  margin: 2rem auto;
-  padding: 1rem 2rem;
-  background-color: #fbe8e1;
-  color: #da7c3c;
-  font-size: 1.2rem;
-  border: none;
+.card {
+  background: #fff;
+  border: 2px solid #fbd4d4;
   border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin: 10px 0 5px 0;
+  color: #5f0f40;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.quantidade {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0;
+}
+
+.quantidade button {
+  background: #f97316;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+.quantidade input {
+  width: 40px;
+  text-align: center;
+  margin: 0 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.enviar {
+  background: #f97316;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
 }

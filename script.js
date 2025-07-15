@@ -1,49 +1,11 @@
-
-const inputs = document.querySelectorAll('.quantidade');
-const totais = document.querySelectorAll('.total');
-
-inputs.forEach((input, index) => {
-    input.addEventListener('input', () => {
-        const preco = parseFloat(input.dataset.preco);
-        const qtd = parseInt(input.value) || 0;
-        totais[index].textContent = (preco * qtd).toFixed(2);
-    });
-});
-
-function enviarWhatsApp() {
-    let mensagem = '*Pedido Trufinhas da Laura*%0A';
-    let totalGeral = 0;
-
-    inputs.forEach((input, index) => {
-        const nome = input.closest('.item').querySelector('h2').textContent;
-        const qtd = parseInt(input.value) || 0;
-        const preco = parseFloat(input.dataset.preco);
-        if (qtd > 0) {
-            const subtotal = preco * qtd;
-            totalGeral += subtotal;
-            mensagem += `• ${nome}: ${qtd} x R$${preco.toFixed(2)} = R$${subtotal.toFixed(2)}%0A`;
-        }
-    });
-
-    mensagem += `%0ATotal: *R$${totalGeral.toFixed(2)}*`;
-
-    const fone = '5521965781487';
-    const url = `https://wa.me/${fone}?text=${mensagem}`;
-    window.location.href = url;
+function incrementar(botao) {
+  let input = botao.parentNode.querySelector('input');
+  input.value = parseInt(input.value) + 1;
 }
 
-document.querySelectorAll('.btn-menor').forEach((btn) => {
-    btn.addEventListener('click', () => {
-        const input = btn.nextElementSibling;
-        input.value = Math.max(0, parseInt(input.value) - 1);
-        input.dispatchEvent(new Event('input'));
-    });
-});
-
-document.querySelectorAll('.btn-maior').forEach((btn) => {
-    btn.addEventListener('click', () => {
-        const input = btn.previousElementSibling;
-        input.value = parseInt(input.value) + 1;
-        input.dispatchEvent(new Event('input'));
-    });
-});
+function decrementar(botao) {
+  let input = botao.parentNode.querySelector('input');
+  if (parseInt(input.value) > 0) {
+    input.value = parseInt(input.value) - 1;
+  }
+}
