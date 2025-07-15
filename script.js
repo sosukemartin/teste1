@@ -1,4 +1,3 @@
-
 const inputs = document.querySelectorAll('.quantidade');
 const totais = document.querySelectorAll('.total');
 
@@ -15,7 +14,9 @@ function enviarWhatsApp() {
     let totalGeral = 0;
 
     inputs.forEach((input, index) => {
-        const nome = input.closest('.item').querySelector('h2').textContent;
+        const item = input.closest('.item');
+        const titulo = item.querySelector('h2') || item.querySelector('h3');
+        const nome = titulo ? titulo.textContent : 'Item sem nome';
         const qtd = parseInt(input.value) || 0;
         const preco = parseFloat(input.dataset.preco);
         if (qtd > 0) {
