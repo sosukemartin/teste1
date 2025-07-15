@@ -1,88 +1,286 @@
 body {
-  margin: 0;
-  font-family: sans-serif;
-  background: #ffe8e8;
-  color: #5f0f40;
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    background: #fff;
+    color: #5e2a84;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-  max-width: 500px;
-  margin: auto;
-  padding: 20px;
-  text-align: center;
+header {
+    background: #fbe8e1;
+    text-align: center;
+    padding: 1rem;
 }
 
 .logo {
-  width: 220px;
-  margin-bottom: 20px;
+    width: 400px;
 }
 
-h2 {
-  font-size: 18px;
-  margin-bottom: 20px;
+h3 {;
+    color: #b84a00;
+    margin-top: 10px;
 }
 
-.card {
-  background: #fff;
-  border: 2px solid #fbd4d4;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 20px;
-  text-align: left;
+h1 {
+    text-align: center;
+    color: #b84a00;
+    margin-top: 20px;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
+.cardapio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
 }
 
-.card h3 {
-  font-size: 18px;
-  margin: 10px 0 5px 0;
-  color: #5f0f40;
+.item {
+    display: flex;
+    flex-direction: row;
+    background: #fef6f2;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(218, 124, 60, 0.2);
+    width: 100%;
+    max-width: 650px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border: 2px solid #fcd9ca;
 }
 
-.card p {
-  font-size: 14px;
-  margin: 5px 0;
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(218, 124, 60, 0.3);
 }
 
-.quantidade {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 10px 0;
+.item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
 }
 
-.quantidade button {
-  background: #f97316;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  font-size: 18px;
-  border-radius: 5px;
-  cursor: pointer;
+.item-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
 }
 
-.quantidade input {
-  width: 40px;
-  text-align: center;
-  margin: 0 8px;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 4px;
+.item-content h2 {
+    color: #da7c3c;
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem;
 }
 
-.enviar {
-  background: #f97316;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 20px;
-  width: 100%;
+.item-content p {
+    font-size: 0.95rem;
+    color: #5e2a84;
+    margin: 0.3rem 0;
+}
+
+.item-content input {
+    width: 60px;
+    padding: 6px;
+    font-size: 1rem;
+    border: 1px solid #da7c3c;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.item-content .total {
+    font-weight: bold;
+    color: #b84a00;
+}
+
+button {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: #fbe8e1;
+    color: #da7c3c;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.quantidade-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border: 1px solid #da7c3c;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 40px;
+    width: fit-content;
+}
+
+.quantidade-wrapper button {
+    background-color: #fbe8e1;
+    color: #da7c3c;
+    border: none;
+    width: 40px !important;
+    height: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+.quantidade-wrapper button:hover {
+    background-color: #fcd9ca;
+}
+
+.quantidade-wrapper input {
+    width: 40px !important;
+    height: 40px;
+    font-size: 1.2rem;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    line-height: 40px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+/* Remove setinhas do input number */
+.quantidade-wrapper input::-webkit-outer-spin-button,
+.quantidade-wrapper input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantidade-wrapper input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* CORREÇÃO MOBILE: manter layout horizontal */
+@media (max-width: 768px) {
+    .cardapio {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .item {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: stretch;
+        max-width: 95vw;
+        width: 95vw;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .item img {
+        width: 110px;
+        height: 110px;
+        object-fit: cover;
+        flex-shrink: 0;
+        border-radius: 12px 0 0 12px;
+        margin: 0;
+    }
+
+    .item-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0.8rem;
+        flex-grow: 1;
+        flex-basis: 0;
+        overflow: hidden;
+        min-width: 0;
+    }
+
+    .item-content h2 {
+        font-size: 1.05rem;
+        margin: 0 0 0.3rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .item-content p {
+        font-size: 0.85rem;
+        margin: 0.2rem 0;
+        line-height: 1.2;
+    }
+
+    .item-content .quantidade-wrapper {
+        margin-top: 0.4rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .item-content input {
+        width: 45px;
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        width: 240px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    button {
+        width: 90%;
+        font-size: 1rem;
+        padding: 0.8rem;
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .item {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .item-content {
+        padding: 0.7rem 0.8rem;
+        justify-content: flex-start;
+        gap: 0.4rem;
+    }
+
+    .item-content p,
+    .item-content .total {
+        word-break: break-word;
+    }
+
+    .quantidade-wrapper {
+        margin-top: 0.5rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .quantidade-wrapper input {
+        font-size: 1rem;
+        width: 35px;
+    }
+
+    .quantidade-wrapper button {
+        width: 35px;
+        font-size: 1rem;
+    }
+
+    .item-content .total {
+        font-size: 0.9rem;
+    }
+
+    .item img {
+        border-radius: 20px 0 0 20px;
+        object-fit: cover;
+    }
 }
