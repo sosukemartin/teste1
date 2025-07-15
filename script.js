@@ -15,10 +15,7 @@ function enviarWhatsApp() {
     let totalGeral = 0;
 
     inputs.forEach((input, index) => {
-        const item = input.closest('.item');
-const titulo = item.querySelector('h2') || item.querySelector('h3');
-const nome = titulo ? titulo.textContent : 'Item sem nome';
-
+        const nome = input.closest('.item').querySelector('h2').textContent;
         const qtd = parseInt(input.value) || 0;
         const preco = parseFloat(input.dataset.preco);
         if (qtd > 0) {
@@ -50,26 +47,3 @@ document.querySelectorAll('.btn-maior').forEach((btn) => {
         input.dispatchEvent(new Event('input'));
     });
 });
-function enviarWhatsApp() {
-    let mensagem = '*Pedido Trufinhas da Laura*%0A';
-    let totalGeral = 0;
-
-    inputs.forEach((input, index) => {
-        const item = input.closest('.item');
-        const titulo = item.querySelector('h2') || item.querySelector('h3');
-        const nome = titulo ? titulo.textContent : 'Item sem nome';
-        const qtd = parseInt(input.value) || 0;
-        const preco = parseFloat(input.dataset.preco);
-        if (qtd > 0) {
-            const subtotal = preco * qtd;
-            totalGeral += subtotal;
-            mensagem += `• ${nome}: ${qtd} x R$${preco.toFixed(2)} = R$${subtotal.toFixed(2)}%0A`;
-        }
-    });
-
-    mensagem += `%0ATotal: *R$${totalGeral.toFixed(2)}*`;
-
-    const fone = '5521965781487'; // Número no formato internacional
-    const url = `https://wa.me/${fone}?text=${mensagem}`;
-    window.location.href = url;
-}
